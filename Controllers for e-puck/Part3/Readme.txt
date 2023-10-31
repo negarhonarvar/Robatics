@@ -1,0 +1,1 @@
+this 2 code are similar , the only diffrence between them is that in the Q2-P3(A) the right and left wheels velocity values are swapped comparing to the Q2-P3(B) code. this swapping resulted in reflection on the diagrams.

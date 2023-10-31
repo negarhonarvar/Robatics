@@ -1,0 +1,1 @@
+Since the wheels of this robot have same velocity,the robot moves on a vertical line resulting the Y-coordinate of the robot to rise while the x-coordinate almost remains the same.the flow of the movement explains the x-y and teta-t graphs. unlike part 2 and 3 ,for more accurecy , we considered the simulation time limit to be 10 seconds.
