@@ -85,7 +85,9 @@ A sample plot initial position = 10:
 
 ## Collosion Detection
 In this section we have a simple forward movement but its toward a box which we aim to measure the input force to our robot using TouchSensor
+
 ![image](https://github.com/user-attachments/assets/a8afa5b9-1ad8-4ea9-aedc-02ac9fc703ed)
+
 
 ## Calculate the robot's path using PositionSensor
 calculate the robot's path using three different sensors: GPS, Compass, and PositionSensor. For each case,  we follow these steps:
