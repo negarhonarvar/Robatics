@@ -1,0 +1,46 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/factory/containers/protos/CardboardBox.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/bounding_objects/protos/PipeBoundingObject.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.6017157751440237 0.5494101343790722 0.5797297906649239 2.044982513658742
+  position -0.05100128199569658 0.06578865654775595 1.116237162752586
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+}
+CardboardBox {
+  translation -1.842846518517999e-17 0.33 0.049607512212273525
+  rotation 0.00730758339035281 -0.05846066712282882 0.9982629661690084 2.917008391712858e-16
+  size 0.1 0.1 0.1
+  mass 1
+}
+E-puck {
+  rotation 0 0 1 1.5708
+  controller "HWC2-Q2-Controller"
+  turretSlot [
+    TouchSensor {
+      translation 0.06 0 0
+      boundingObject PipeBoundingObject {
+        translation -0.05 0 0.01
+        height 0.1
+        radius 0.05
+        thickness 0.004
+      }
+      physics Physics {
+        density 0.1
+      }
+      type "force"
+    }
+  ]
+}

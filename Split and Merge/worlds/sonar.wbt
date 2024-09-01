@@ -1,0 +1,64 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/apartment_structure/protos/Wall.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.5773502691896258 0.5773502691896258 0.5773502691896258 2.0944
+  position 0.0006034446370489401 1.563842832414525e-05 1.8397240504649073
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+}
+Wall {
+  translation 0.25 0 0
+  size 0.2 0.05 0.2
+}
+Wall {
+  translation 0.25 0.22 0
+  name "wall(1)"
+  size 0.2 0.05 0.2
+}
+Wall {
+  translation -0.27 -0.26 0
+  name "wall(2)"
+  size 0.2 0.05 0.2
+}
+Wall {
+  translation -0.27 0.17 0
+  name "wall(3)"
+  size 0.2 0.05 0.2
+}
+E-puck {
+  hidden position_0_0 99.6714402451914
+  hidden position_0_1 1.747398128899215e-06
+  hidden linearVelocity_0 -0.009052162077951975 0.004322266314781612 -2.338475297876943e-09
+  hidden angularVelocity_0 -0.0005197830181233783 -0.0011051192370720659 -0.35138410933640685
+  hidden rotation_1 0 -1 0 0.8595246696819785
+  hidden linearVelocity_1 -0.017302758864695744 0.008266031662989868 5.844328931974296e-09
+  hidden angularVelocity_1 -0.43179799214948833 -0.9033407369918194 -0.352273983714676
+  hidden rotation_2 0 1 0 1.7474431054913418e-06
+  hidden linearVelocity_2 -0.0008128972429961122 0.00038315295960023347 -5.812712267031942e-09
+  hidden angularVelocity_2 -0.0005197852325866281 -0.0011051384656537275 -0.351384109332195
+  translation -0.012411806217862033 -0.054134504009768554 -6.424912169549282e-05
+  rotation -0.00011773035700036993 2.0303656361398824e-05 0.9999999928636625 2.6899294850783875
+  controller "my_controller3"
+  turretSlot [
+    Compass {
+    }
+    DistanceSensor {
+      lookupTable [
+        0 0 0
+        2 1000 0
+      ]
+    }
+  ]
+}
