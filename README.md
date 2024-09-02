@@ -15,6 +15,12 @@ Since the MNIST fashion dataset includes low-resolution images ,we had to apply 
 # Controllers for epoch in webots
 For better understanding of the codes, please first check webots documents regarding epoch
 
+
+
+https://github.com/user-attachments/assets/92665b27-760e-49ac-aca4-f429564b0454
+
+
+
 ## Basic Controllers
 In the first section we shall implement a series of basic controllers for epoch.
 ### Applying diffrent Angular velocity
