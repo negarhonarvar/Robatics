@@ -13,6 +13,8 @@ We started coding the controller with trying diffrent values of speed ,height an
 ## CNN
 Since the MNIST fashion dataset includes low-resolution images ,we had to apply a number of filters on the caputerd images before feeding it to our cnn. Since the edges were not quite obvious, our model frequency mistook all fashion items with bags due to their curvy shape. To address this issue we increased the contrast which made edges more distinguish and sharp along with a number of other filtesr which helped our model to predict labels correctly.
 
+### Final Result
+
 https://github.com/user-attachments/assets/92665b27-760e-49ac-aca4-f429564b0454
 
 # Controllers for epoch in webots
