@@ -1,7 +1,8 @@
 # Guidance of a Quadcopter for Object Detection
 We aim to design a controller for a quadcopter in order to control its flight over a number of boxs in the following environment:
 
-![image](https://github.com/user-attachments/assets/a0cd26b8-d9dc-4c81-839b-37a41baed08b)
+![363524935-a0cd26b8-d9dc-4c81-839b-37a41baed08b](https://github.com/user-attachments/assets/48067e55-711a-434c-b238-9cb7c6892f14)
+
 
 
 ![image](https://github.com/user-attachments/assets/d18c1414-8f01-4bf2-8b09-fd9b29ce7dde)
@@ -12,14 +13,10 @@ We started coding the controller with trying diffrent values of speed ,height an
 ## CNN
 Since the MNIST fashion dataset includes low-resolution images ,we had to apply a number of filters on the caputerd images before feeding it to our cnn. Since the edges were not quite obvious, our model frequency mistook all fashion items with bags due to their curvy shape. To address this issue we increased the contrast which made edges more distinguish and sharp along with a number of other filtesr which helped our model to predict labels correctly.
 
-# Controllers for epoch in webots
-For better understanding of the codes, please first check webots documents regarding epoch
-
-
-
 https://github.com/user-attachments/assets/92665b27-760e-49ac-aca4-f429564b0454
 
-
+# Controllers for epoch in webots
+For better understanding of the codes, please first check webots documents regarding epoch
 
 ## Basic Controllers
 In the first section we shall implement a series of basic controllers for epoch.
