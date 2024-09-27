@@ -1,11 +1,11 @@
 # Guidance of a Quadcopter for Object Detection
 We aim to design a controller for a quadcopter in order to control its flight over a number of boxs in the following environment:
 
-![363524935-a0cd26b8-d9dc-4c81-839b-37a41baed08b](https://github.com/user-attachments/assets/48067e55-711a-434c-b238-9cb7c6892f14)
+<img src="https://github.com/user-attachments/assets/48067e55-711a-434c-b238-9cb7c6892f14" width = "400" >
 
 
 
-![image](https://github.com/user-attachments/assets/d18c1414-8f01-4bf2-8b09-fd9b29ce7dde)
+<img src="https://github.com/user-attachments/assets/d18c1414-8f01-4bf2-8b09-fd9b29ce7dde" width = "400" >
 
 Each box is labeled with one image from MNIST fashion dataset and at each run we determain a 'target label' which corresponds to the clothing item we want to detect. When our robot flies over this boxes, it is supposed to take images from this boxs and , using a cnn , determine the clothing item in captured image. If the output of the cnn doesn't match with the target label then aour robot continues fliyng and visits other boxs but if the labels match then it should land next to the box with target clothing item and turn on its front LED's.
 ## Controller
@@ -26,21 +26,21 @@ In the first section we shall implement a series of basic controllers for epoch.
 In order to better understand the concepts of epoch movement we code a simple controller in which by changing values of parameters ' max_speed_left ' and ' max_speed_right ' we can access and adjust angular velocity of each wheel. we use ' GPS ' and ' Compass ' sensors to plot the movement of our robot. x-y of robot movement and time-teta plot of robot heading in each time plot is avaiable for 3 diffrent set of angular velocity values :
 Part 1 : φ˙ 1 = 1rad/s, φ˙ 2 = 1rad/s
 
-![Q1-tt](https://github.com/user-attachments/assets/7d633139-4592-421f-a8c5-c91d8e20c629)
+<img src="https://github.com/user-attachments/assets/7d633139-4592-421f-a8c5-c91d8e20c629" width = "400" >
 
-![Q1-xy](https://github.com/user-attachments/assets/30fdf348-b154-4f53-902c-dfc8afb39abe)
+<img src="https://github.com/user-attachments/assets/30fdf348-b154-4f53-902c-dfc8afb39abe" width = "400" >
 
 Part 2 : φ˙ 1 = 1rad/s, φ˙ 2 = −1rad/s
 
-![Figure_1](https://github.com/user-attachments/assets/d06a6a94-6708-4957-855a-860eef42c106)
+<img src="https://github.com/user-attachments/assets/d06a6a94-6708-4957-855a-860eef42c106" width = "400" >
 
-![Figure_2](https://github.com/user-attachments/assets/f9b2b1f9-5cb1-45e6-afea-e087e2b52c88)
+<img src="https://github.com/user-attachments/assets/f9b2b1f9-5cb1-45e6-afea-e087e2b52c88" width = "400" >
 
 Part 3 : φ˙ 1(t) = sin t rad/s, φ˙ 2(t) = −cos t rad/s
 
-![Figure_1](https://github.com/user-attachments/assets/38af5997-e02c-405a-b45e-2e8777057047)
+<img src="https://github.com/user-attachments/assets/38af5997-e02c-405a-b45e-2e8777057047" width = "400" >
 
-![Figure_2](https://github.com/user-attachments/assets/c8ca2b33-2a16-408e-bed9-290d05ee9584)
+<img src="https://github.com/user-attachments/assets/c8ca2b33-2a16-408e-bed9-290d05ee9584" width = "400" >
 
 
 ### Forward Cinematic Function
@@ -84,28 +84,28 @@ Case 1:
 v=3m/s,ω=0.1rad/s
 The robot moves in a curved trajectory. The orientation (𝜃) increases gradually over time.
 
-![Q4-1-tt](https://github.com/user-attachments/assets/2d5db6f0-413c-4514-89e4-901de1d8f3c1)
+<img src="https://github.com/user-attachments/assets/2d5db6f0-413c-4514-89e4-901de1d8f3c1" width = "400" >
 
-![Q4-1-xy](https://github.com/user-attachments/assets/0287a5e2-a685-421a-bd45-18477dce2a07)
+<img src="https://github.com/user-attachments/assets/0287a5e2-a685-421a-bd45-18477dce2a07" width = "400" >
 
 Case 2: 
 v=0m/s,ω=0.5rad/s
 The robot rotates in place without any translational movement, resulting in a circular path with no change in 𝑋 or 𝑌 position. The orientation (𝜃) increases more rapidly over time.
 
-![Q4-2-tt](https://github.com/user-attachments/assets/ffb8106d-9911-42fd-bbae-c024aca88003)
+<img src="https://github.com/user-attachments/assets/ffb8106d-9911-42fd-bbae-c024aca88003" width = "400" >
 
-![Q4-2-xy](https://github.com/user-attachments/assets/f2dbdc1d-59d3-4a6d-b0f4-3823cec17ecd)
+<img src="https://github.com/user-attachments/assets/f2dbdc1d-59d3-4a6d-b0f4-3823cec17ecd" width = "400" >
 
 ##  guiding epoch towards the center of a circle
 We want to design a controller that guides our robot towards the center of a circle with a random heading degree .The robot starts at a certain point on the circle's perimeter, and the circle has a radius of 0.5 meters. We need to consider different initial positions of the robot and simulate its movement towards the center using the designed controller.
 A sample plot initial position = 10:
 
-![Figure_1](https://github.com/user-attachments/assets/1031ee99-f29d-461b-b170-342f5723f088)
+<img src="https://github.com/user-attachments/assets/1031ee99-f29d-461b-b170-342f5723f088" width = "400" >
 
 ## Collosion Detection
 In this section we have a simple forward movement but its toward a box which we aim to measure the input force to our robot using TouchSensor
 
-![image](https://github.com/user-attachments/assets/a8afa5b9-1ad8-4ea9-aedc-02ac9fc703ed)
+<img src="https://github.com/user-attachments/assets/a8afa5b9-1ad8-4ea9-aedc-02ac9fc703ed" width = "400" >
 
 
 ## Calculate the robot's path using PositionSensor
@@ -126,20 +126,33 @@ The term "time step tt" refers to the simulation's time intervals. You can check
 ## Split and Merge
 In this section we shall create a map of the environment shown below using Split and Merge algorithm as explained :
 
-![image](https://github.com/user-attachments/assets/0450f6d9-9ae1-416d-80eb-92217cb6be3e)
+<img src="https://github.com/user-attachments/assets/0450f6d9-9ae1-416d-80eb-92217cb6be3e" width = "400" >
+
 
 Environment:
 
-![SharedScreenshot2](https://github.com/user-attachments/assets/ad7000c4-b9a6-4958-a271-e5a1a04bbe60)
+<img src="https://github.com/user-attachments/assets/ad7000c4-b9a6-4958-a271-e5a1a04bbe60" width = "400" >
 
-Gathered maps are available under /maps directory at the related directory.
+
+Gathered maps :
+
+
+<img src="https://github.com/user-attachments/assets/b86434be-f478-4def-8a1c-68a2a3fd5ea5" width = "400" >
+
+
+<img src="https://github.com/user-attachments/assets/94b46f31-de9f-4282-aaef-da7c8b455709" width = "400" >
+
+
+<img src="https://github.com/user-attachments/assets/d7e26ca7-ffbd-4595-bf9d-95ed43ab07d3" width = "400" >
+
 
 # Bug Algorithms in a Maze
 We shall implement Bug1 , Bug2 and wall following algorithm for guiding an epoch rebot through a maze to a target position.
 
-![image](https://github.com/user-attachments/assets/fdbef732-7f0d-437a-9ad8-a44e5469da70)
 
-![image](https://github.com/user-attachments/assets/ed615e48-3640-433d-b337-4eb0f6675363)
+<img src="https://github.com/user-attachments/assets/fdbef732-7f0d-437a-9ad8-a44e5469da70" width = "400" >
+
+<img src="https://github.com/user-attachments/assets/ed615e48-3640-433d-b337-4eb0f6675363" width = "400" >
 
 ## Bug 1 and Map Gathering
 Bug 1 is implemented mostly similar to bug2 but with a few number of differences  :
@@ -157,14 +170,14 @@ Bug 1 is implemented mostly similar to bug2 but with a few number of differences
 
 In summary, **Bug2** is generally more efficient than **Bug1** in environments with obstacles because it tries to minimize unnecessary exploration and follows a more direct path towards the goal.
 
-![image](https://github.com/user-attachments/assets/cb769ad6-d03f-43ce-9302-a3e9c2afa854)
+<img src="https://github.com/user-attachments/assets/cb769ad6-d03f-43ce-9302-a3e9c2afa854" width = "400" >
 
 
 Using Distance Sensor with Threshold 0.05 for Gathering a Map of Maze:
 The distance sensor is used to detect obstacles. The threshold of 0.05 implies that when the sensor detects an object closer than this distance, it triggers a response (e.g., the robot considers this a boundary or obstacle).
 In essence, the robot uses the Bug1 algorithm for navigation while applying the Split and Merge method to process sensor data, particularly from a distance sensor, to identify and manage obstacles effectively. The threshold helps in distinguishing when an obstacle is close enough to require the robot to adjust its path.
 
-![image](https://github.com/user-attachments/assets/085b3d90-7ef0-452e-849c-00daab557eb3)
+<img src="https://github.com/user-attachments/assets/085b3d90-7ef0-452e-849c-00daab557eb3" width = "400" >
 
 ## Bug 2
 This code's algorithm is designed to guide a robot using the "wall-following" approach. This method is commonly used in environments with obstacles and mazes to prevent the robot from colliding with obstacles and to help it find a path around them. The algorithm operates in several main states:
@@ -197,10 +210,10 @@ This code's algorithm is designed to guide a robot using the "wall-following" ap
 
 Considering the overall BUG2 algorithm, the robot may traverse around the maze multiple times, eventually reaching its goal by following the M-line. The implemented algorithm includes a mechanism for making turning decisions that reduce exploration but increase exploitation. This mechanism records the robot's last turn direction and chooses to turn in the opposite direction the next time it needs to avoid an obstacle.
 
-![image](https://github.com/user-attachments/assets/32a42d7c-6fa6-4bec-9ef9-947e7ab051c9)
+<img src="https://github.com/user-attachments/assets/32a42d7c-6fa6-4bec-9ef9-947e7ab051c9" width = "400" >
 
 
 ## Wall Following
 This aproach is mostly similar to bug2 but the only priority for our robot is to stay close to wall. The path taken with this algorithm is shown below :
 
-![image](https://github.com/user-attachments/assets/4d53db20-f006-43e0-a37d-2098bf923b08)
+<img src="https://github.com/user-attachments/assets/4d53db20-f006-43e0-a37d-2098bf923b08" width = "400" >
