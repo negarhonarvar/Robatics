@@ -4,7 +4,6 @@ We aim to design a controller for a quadcopter in order to control its flight ov
 <img src="https://github.com/user-attachments/assets/48067e55-711a-434c-b238-9cb7c6892f14" width = "400" >
 
 
-
 <img src="https://github.com/user-attachments/assets/d18c1414-8f01-4bf2-8b09-fd9b29ce7dde" width = "400" >
 
 Each box is labeled with one image from MNIST fashion dataset and at each run we determain a 'target label' which corresponds to the clothing item we want to detect. When our robot flies over this boxes, it is supposed to take images from this boxs and , using a cnn , determine the clothing item in captured image. If the output of the cnn doesn't match with the target label then aour robot continues fliyng and visits other boxs but if the labels match then it should land next to the box with target clothing item and turn on its front LED's.
@@ -24,6 +23,7 @@ For better understanding of the codes, please first check webots documents regar
 In the first section we shall implement a series of basic controllers for epoch.
 ### Applying diffrent Angular velocity
 In order to better understand the concepts of epoch movement we code a simple controller in which by changing values of parameters ' max_speed_left ' and ' max_speed_right ' we can access and adjust angular velocity of each wheel. we use ' GPS ' and ' Compass ' sensors to plot the movement of our robot. x-y of robot movement and time-teta plot of robot heading in each time plot is avaiable for 3 diffrent set of angular velocity values :
+
 Part 1 : φ˙ 1 = 1rad/s, φ˙ 2 = 1rad/s
 
 <img src="https://github.com/user-attachments/assets/7d633139-4592-421f-a8c5-c91d8e20c629" width = "400" >
